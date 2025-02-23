@@ -1,17 +1,20 @@
 # TEST Website
 
 Model: TEST
+
 Node verions: 20
+
+Tech: Next.js (v14), React.js (v18), Material UI (v6), Typescript (v5)
 
 ## Website
 
 #### Production
 
-[project-name.com](https://project-name.com)
+[project-name.com](https://domain.com)
 
 #### Development
 
-[project-name.com](https://project-name.com)
+[project-name.com](https://domain.com)
 
 ## Install
 
@@ -21,33 +24,15 @@ yarn
 
 ## Run localhost
 
-you must run https under localhost according to the command below to be able to use login
-
 ```bash
-yarn dev:http
+yarn dev
 ```
 
 ## Build Project
 
-##### Development
-
-```bash
-yarn dev:http
-```
-
-### Production
-
 ```bash
 yarn build
 yarn start
-```
-
-###### Noted: you must use https to log into the system
-
-## Instructions for deployment on the server environment
-
-```bash
-
 ```
 
 ## Clear Cache
