@@ -43,7 +43,6 @@ const AppLink: AppLinkComponent = forwardRef(
       <Link
         ref={ref}
         component={!!disabledNextLink ? "a" : NextLink}
-        variant="body1"
         {...rest}
         classes={{
           ...muiClasses,

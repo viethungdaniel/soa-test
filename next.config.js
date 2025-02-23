@@ -7,7 +7,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const nextConfig = {
-  output: "standalone",
+  // output: "standalone",
   i18n: {
     localeDetection: false,
     ...i18n,

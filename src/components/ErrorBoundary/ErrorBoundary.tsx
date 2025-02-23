@@ -78,7 +78,7 @@ class ErrorBoundary extends Component<Props, State> {
 const styles = (theme: Theme) => {
   return {
     root: {
-      minHeight: "100dvh",
+      minHeight: "100vh",
       display: "flex",
       flexDirection: "column" as any,
       alignItems: "center",

@@ -3,6 +3,7 @@ import MainHeader from "@/layouts/MainLayout/components/MainHeader";
 import MainFooter from "@/layouts/MainLayout/components/MainFooter";
 
 import useStyles from "./MainLayout.styles";
+import FloatActions from "./components/FloatActions";
 
 type MainLayoutProps = {
   children: React.ReactNode;
@@ -23,6 +24,7 @@ const MainLayout = (props: MainLayoutProps) => {
         <footer className={classes.mainBottomContainer}>
           <MainFooter />
         </footer>
+        <FloatActions />
       </NoSsr>
     </div>
   );

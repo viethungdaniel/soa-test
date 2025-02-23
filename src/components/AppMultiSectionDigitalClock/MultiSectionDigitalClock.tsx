@@ -71,7 +71,7 @@ const AppDigitalClockSectionItem = forwardRef(
         fullWidth
         {...rest}
         classes={{
-          ...muiClasses,
+          ...(muiClasses as any),
           root: cx(
             classes.digitalClockSectionItem,
             muiClasses?.root,

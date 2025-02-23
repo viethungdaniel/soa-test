@@ -372,6 +372,18 @@ const typography: TypographyOptions = {
     },
   },
 
+  headSemi40: {
+    fontFamily,
+    fontWeight: 600,
+    fontSize: muiTheme.typography.pxToRem(40),
+    lineHeight: "normal",
+    letterSpacing: "normal",
+    wordBreak: "break-word",
+    [muiTheme.breakpoints.down("md")]: {
+      fontSize: muiTheme.typography.pxToRem(24),
+    },
+  },
+
   headSemi52: {
     fontFamily,
     fontWeight: 600,
@@ -502,6 +514,8 @@ const defaultTheme = createTheme({
           titleReg28: "p",
           titleMed28: "p",
           titleSemi28: "p",
+
+          headSemi40: "p",
 
           headSemi52: "p",
         },

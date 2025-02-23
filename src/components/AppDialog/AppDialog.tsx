@@ -34,7 +34,7 @@ const AppDialog: AppDialogComponent = forwardRef(
     return (
       <Dialog
         ref={ref}
-        PaperComponent={AppPaper}
+        PaperComponent={AppPaper as any}
         {...rest}
         classes={{
           ...muiClasses,

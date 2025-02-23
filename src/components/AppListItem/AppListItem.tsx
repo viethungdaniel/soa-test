@@ -38,7 +38,6 @@ const AppListItem: AppListItemComponent = forwardRef(
             muiClasses?.padding,
             sx && css(theme.unstable_sx(sx) as any)
           ),
-          selected: cx(classes.selected, muiClasses?.selected),
         }}
       />
     );

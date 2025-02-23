@@ -362,8 +362,7 @@ export const decodeBase64 = (str: string) =>
     : window.atob(str);
 
 export const filePathLoader = (path?: string) => {
-  return "";
-  // return !!path ? `${envConfig.CDN_HOST}${path ?? ""}` : "";
+  return !!path ? `${envConfig.BASE_DOMAIN}${path ?? ""}` : "";
 };
 
 export const parseStyles = (stringStyles: string | React.CSSProperties) =>

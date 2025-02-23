@@ -12,8 +12,8 @@ export const middleware = async (req: NextRequest) => {
     `frame-ancestors 'none';`,
     `default-src 'self' ${envConfig.API_DOMAIN};`,
     // `default-src 'self'`,
-    `style-src 'self' ${isProd ? `'nonce-${nonce}'` : `'unsafe-inline'`};`,
-    // `style-src 'self' 'unsafe-inline';`,
+    // `style-src 'self' ${isProd ? `'nonce-${nonce}'` : `'unsafe-inline'`};`,
+    `style-src 'self' 'unsafe-inline';`,
     `script-src 'self' www.gstatic.com ${
       isProd
         ? `'nonce-${nonce}' 'strict-dynamic' https: http:`

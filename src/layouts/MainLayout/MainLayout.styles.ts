@@ -11,7 +11,7 @@ const useStyles = makeStyles({
       overflowX: "clip",
     },
     main: {
-      minHeight: "calc(100dvh - 80px)",
+      minHeight: "calc(100vh - 72px)",
       display: "flex",
       flexDirection: "column",
       width: "100%",

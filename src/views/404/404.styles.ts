@@ -9,7 +9,7 @@ const useStyles = makeStyles({
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      minHeight: "100dvh",
+      minHeight: "100vh",
       paddingTop: theme.spacing(5),
       paddingBottom: theme.spacing(5),
     },

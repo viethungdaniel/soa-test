@@ -71,6 +71,8 @@ declare module "@mui/material/styles" {
     titleMed28: React.CSSProperties;
     titleSemi28: React.CSSProperties;
 
+    headSemi40: React.CSSProperties;
+
     headSemi52: React.CSSProperties;
   }
 
@@ -106,6 +108,8 @@ declare module "@mui/material/styles" {
     titleReg28?: React.CSSProperties;
     titleMed28?: React.CSSProperties;
     titleSemi28?: React.CSSProperties;
+
+    headSemi40?: React.CSSProperties;
 
     headSemi52?: React.CSSProperties;
   }
@@ -197,6 +201,8 @@ declare module "@mui/material/Typography" {
     titleReg28: true;
     titleMed28: true;
     titleSemi28: true;
+
+    headSemi40: true;
 
     headSemi52: true;
 

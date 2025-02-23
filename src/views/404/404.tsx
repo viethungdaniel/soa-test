@@ -27,7 +27,7 @@ const _404 = () => {
         variant="contained"
         fullWidth
         component={AppLink}
-        href="/appointments"
+        href="/"
         hoverColor="none"
         underline="none"
       >

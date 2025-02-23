@@ -43,7 +43,7 @@ const AppDrawerTitle: AppDrawerTitleComponent = forwardRef(
         ref={ref}
         {...rest}
       >
-        <AppTypography variant="titleMed24" flex={1}>
+        <AppTypography variant="subtitleMed24" flex={1}>
           {children}
         </AppTypography>
         {!!onClose && (
