@@ -8,12 +8,11 @@ export const middleware = async (req: NextRequest) => {
   const isProd = process.env.NODE_ENV === "production";
 
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
+
   const contentSecurityPolicyHeaderValue = [
     `frame-ancestors 'none';`,
     `default-src 'self' ${envConfig.API_DOMAIN};`,
-    // `default-src 'self'`,
-    // `style-src 'self' ${isProd ? `'nonce-${nonce}'` : `'unsafe-inline'`};`,
-    `style-src 'self' 'unsafe-inline';`,
+    `style-src 'self' ${isProd ? `'nonce-${nonce}'` : `'unsafe-inline'`};`,
     `script-src 'self' www.gstatic.com ${
       isProd
         ? `'nonce-${nonce}' 'strict-dynamic' https: http:`
@@ -30,18 +29,8 @@ export const middleware = async (req: NextRequest) => {
     `upgrade-insecure-requests;`,
   ].join(" ");
 
-  const requestHeaders = new Headers(req.headers);
-  requestHeaders.set("x-nonce", nonce);
-  requestHeaders.set(
-    "Content-Security-Policy",
-    contentSecurityPolicyHeaderValue
-  );
-
-  const response = NextResponse.next({
-    request: {
-      headers: requestHeaders,
-    },
-  });
+  const response = NextResponse.next();
+  response.headers.set("x-nonce", nonce);
   response.headers.set(
     "Content-Security-Policy",
     contentSecurityPolicyHeaderValue

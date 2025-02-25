@@ -1,5 +1,6 @@
 import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "next-seo";
+import { useRef } from "react";
 
 // import { END } from "redux-saga";
 
@@ -65,11 +66,14 @@ const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
   } = wrappedStoreProps as MyAppProps;
 
   const { nonce, deviceType } = app ?? {};
+
+  const nonceRef = useRef(nonce);
+
   const clientSideMuiEmotionCache = createMuiEmotionCache({
-    nonce,
+    nonce: nonceRef.current,
   });
   const clientSideAppEmotionCache = createAppEmotionCache({
-    nonce,
+    nonce: nonceRef.current,
   });
 
   const {

@@ -12,33 +12,9 @@ const nextConfig = {
     localeDetection: false,
     ...i18n,
   },
-  experimental: {
-    optimizePackageImports: [
-      "lodash",
-      "@mui/material",
-      "@mui/icons-material",
-      "@mui/x-date-pickers",
-      "@mui/system",
-      "next-seo",
-      "@reduxjs/toolkit",
-      "@tanstack/react-table",
-      "@toolpad/core",
-      "libphonenumber-js",
-      "react-toastify",
-      "react-window",
-      "react-window-infinite-loader",
-      "redux",
-      "redux-saga",
-      "swiper",
-      "tss-react",
-      "ua-parser-js",
-      "uuid",
-      "yup",
-    ],
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-  // eslint: {
-  //   ignoreDuringBuilds: true,
-  // },
   images: {
     formats: ["image/webp"],
     dangerouslyAllowSVG: true,
@@ -60,22 +36,22 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // matcher: [
-  //   /*
-  //    * Match all request paths except for the ones starting with:
-  //    * - api (API routes)
-  //    * - _next/static (static files)
-  //    * - _next/image (image optimization files)
-  //    * - favicon.ico (favicon file)
-  //    */
-  //   {
-  //     source: "/((?!api|_next/static|_next/image|favicon.ico).*)",
-  //     missing: [
-  //       { type: "header", key: "next-router-prefetch" },
-  //       { type: "header", key: "purpose", value: "prefetch" },
-  //     ],
-  //   },
-  // ],
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    {
+      source: "/((?!api|_next/static|_next/image|favicon.ico).*)",
+      missing: [
+        { type: "header", key: "next-router-prefetch" },
+        { type: "header", key: "purpose", value: "prefetch" },
+      ],
+    },
+  ],
   async headers() {
     return [
       {
